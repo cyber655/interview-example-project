@@ -22,7 +22,8 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         return handleExceptionInternal(ex, ex.getErrorMessage(), new HttpHeaders(), ex.getHttpStatus(), request);
     }
 
-    @Override
+
+
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         String errorMessage = ex.getBindingResult().getFieldErrors().stream().findFirst().map(fieldError -> {
             String fieldName = fieldError.getField();
@@ -32,22 +33,18 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
         return handleExceptionInternal(ex, new CustomExceptionConvertedResponseBody(status.value(), errorMessage, null), new HttpHeaders(), status, request);
     }
 
-    @Override
     protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         return handleExceptionInternal(ex, new CustomExceptionConvertedResponseBody(status.value(), ex.getMessage(), null), new HttpHeaders(), status, request);
     }
 
-    @Override
     protected ResponseEntity<Object> handleBindException(BindException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         return handleExceptionInternal(ex, new CustomExceptionConvertedResponseBody(status.value(), ex.getMessage(), null), new HttpHeaders(), status, request);
     }
 
-    @Override
     protected ResponseEntity<Object> handleConversionNotSupported(ConversionNotSupportedException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         return handleExceptionInternal(ex, new CustomExceptionConvertedResponseBody(status.value(), ex.getMessage(), null), new HttpHeaders(), status, request);
     }
 
-    @Override
     protected ResponseEntity<Object> handleExceptionInternal(Exception ex, Object body, HttpHeaders headers, HttpStatus status, WebRequest request) {
         String errorMessage = ex.getMessage();
         Optional<ErrorFieldList> optional = Optional.empty();

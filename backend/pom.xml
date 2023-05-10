@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.5</version>
+        <version>3.0.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.tristanruecker</groupId>
@@ -17,7 +17,7 @@
     <properties>
         <project.version>1.2.4</project.version>
         <release.type>SNAPSHOT</release.type>
-        <java.version>11</java.version>
+        <java.version>20</java.version>
         <retrofit.version>2.9.0</retrofit.version>
         <skipTests>false</skipTests>
         <skipIntegrationTests>false</skipIntegrationTests>
@@ -190,8 +190,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>20</source>
+                    <target>20</target>
                 </configuration>
             </plugin>
 
