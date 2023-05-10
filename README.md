@@ -46,6 +46,6 @@ npm run start
 
 TODO list:
 ===
-1. Write Github action that is deploying the kubernetes files to an GKE cluster
+1. Write Github action that is deploying the kubernetes files to an GKE cluster or another cloud instance
 2. Write much more tests especially for the frontend and the backend
 3. More coming soon...
