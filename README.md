@@ -1,13 +1,14 @@
 Showcase (deployed on Google Kubernetes Engine (GKE)):
 ===
 
-https://gke-test.ruecker.dev/
+Currently disabled because of costs.
+Will be enabled again when it is necessary.
 
 Description:
 ===
 
 This is just an example project to discuss some technologies for an interview.
-There are currently maaany TODO'S in this project (See TODO section).
+There are many todos to improve this project. (See TODO section - not all todos listed there).
 
 How to get started for development:
 ===
@@ -41,7 +42,7 @@ and press the green start button on the left.
 
 Hint: You can open http://localhost:4667/api/swagger-ui/index.html#/ for the REST swagger documentation.
 
-4. Starting the frontend (NPM preffered but yarn could also be used):
+4. Starting the frontend:
 
 ```
 npm install
@@ -51,6 +52,6 @@ npm run start
 
 TODO list:
 ===
-1. Write Github action that is deploying the kubernetes files to an GKE cluster or another cloud instance
+1. Extend Github actions tagging pipeline to automatically deploy the project to a GKE cluster
 2. Write much more tests especially for the frontend and the backend
 3. More coming soon...
